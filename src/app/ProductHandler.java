@@ -15,7 +15,7 @@ public class ProductHandler {
         // Check runtime Java version, because part of next implementation work in Java 16 and later
         // If possible runtime in Java less than 16, need to change implementation method getAnnot
         if (!CheckJavaVersion.checkRunIsAllow()) {
-            System.out.println(Config.versionNotAllowMessage);
+            System.err.println(Config.versionNotAllowMessage);
             System.exit(1);
         }
         ProductInfo infoProduct = new ProductInfo();
